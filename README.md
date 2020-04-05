@@ -2,7 +2,7 @@
 
 单文件上传，多文件上传，大文件上传，断点续传，文件秒传，图片上传
 
-**本项目为前端实现**
+**本项目为后端实现**
 
 后端项目地址： [https://github.com/tzs199373/upload-web](https://github.com/tzs199373/upload-web)
 
