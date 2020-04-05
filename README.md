@@ -1,12 +1,13 @@
-# MyUploader-Backend
-> 单文件上传，多文件上传，大文件上传，断点续传，文件秒传，图片上传
-> 
-> 前端项目地址： [https://github.com/gaoyuyue/MyUploader](https://github.com/gaoyuyue/MyUploader)
-
 # 简介
-采用前后端分离的方式进行开发，实现了几种常用的文件上传功能。 前端采用 vue.js + plupload + element-ui 实现了文件在浏览器端的发送, 后端采用 spring boot + spring + spring mvc + mybatis 实现了文件在服务器端的接收和存储。
 
-***本项目为后端实现***
+单文件上传，多文件上传，大文件上传，断点续传，文件秒传，图片上传
+
+**本项目为前端实现**
+
+后端项目地址： [https://github.com/tzs199373/upload-web](https://github.com/tzs199373/upload-web)
+
+项目采用前后端分离的方式进行开发，实现了几种常用的文件上传功能。
+前端采用 vue.js + plupload + element-ui 实现了文件在浏览器端的发送, 后端采用 spring boot + spring + spring mvc + mybatis 实现了文件在服务器端的接收和存储。
 
 # 后端实现
 ## 未分块上传
