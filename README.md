@@ -9,6 +9,21 @@
 项目采用前后端分离的方式进行开发，实现了几种常用的文件上传功能。
 前端采用 vue.js + plupload + element-ui 实现了文件在浏览器端的发送, 后端采用 spring boot + spring + spring mvc + mybatis 实现了文件在服务器端的接收和存储。
 
+# 建表语句
+
+```sql
+DROP TABLE IF EXISTS `file`;
+CREATE TABLE `file` (
+  `id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `md5` varchar(255) DEFAULT NULL,
+  `path` varchar(255) DEFAULT NULL,
+  `upload_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+
+
+
 # 后端实现
 ## 未分块上传
 采用MultipartFile接收上传文件并使用FileOutputStream写入文件
