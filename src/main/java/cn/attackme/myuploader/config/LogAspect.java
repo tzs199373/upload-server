@@ -6,7 +6,7 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
-import static cn.attackme.myuploader.utils.LogUtils.logToFile;
+import  cn.attackme.myuploader.utils.LogUtils;
 
 @Aspect
 @Component
@@ -20,6 +20,6 @@ public class LogAspect {
      */
     @AfterThrowing(throwing = "ex", pointcut = "execution(* cn.attackme.myuploader.*.*.*(..)))")
     public void logPoint(JoinPoint joinPoint, Throwable ex) {
-        logToFile(joinPoint,ex);
+        LogUtils.logToFile(joinPoint,ex);
     }
 }
