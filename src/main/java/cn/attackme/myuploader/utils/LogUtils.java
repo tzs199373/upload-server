@@ -3,6 +3,8 @@ package cn.attackme.myuploader.utils;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Date;
 
@@ -11,6 +13,7 @@ import java.util.Date;
  */
 @Slf4j
 public class LogUtils {
+    private static final Logger logger = LoggerFactory.getLogger(LogUtils.class);
 
     /**
      * 日志输出到文件
@@ -24,7 +27,7 @@ public class LogUtils {
         String className = stackTraceElement.getClassName();
         //方法名
         String methodName = stackTraceElement.getMethodName();
-        log.error("方法:" + className + "." + methodName + " | " +
+        logger.error("方法:" + className + "." + methodName + " | " +
                 "参数:" + stackTraceElement + " | " + "错误行：" + lineNumber + " | " +
                 "时间:" + " | " + new Date() + " | " + "异常内容:" + ex.toString()
         );
@@ -48,7 +51,7 @@ public class LogUtils {
                 builder.append(o);
             }
         }
-        log.error("方法:" + signature + " | " + "参数:" + builder.toString() +
+        logger.error("方法:" + signature + " | " + "参数:" + builder.toString() +
                 " | " + "错误行：" + lineNumber + " | " + "时间:" + new Date() +
                 " | " + "异常内容:" + ex.toString()
         );
